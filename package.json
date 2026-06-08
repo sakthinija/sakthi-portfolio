@@ -1,28 +1,47 @@
 {
-  "name": "sakthi-portfolio",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "framer-motion": "^12.40.0",
-    "lucide-react": "^0.469.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
-  },
-  "devDependencies": {
-    "@tailwindcss/vite": "^4.3.0",
-    "@vitejs/plugin-react": "^6.0.2",
-    "autoprefixer": "^10.5.0",
-    "postcss": "^8.5.15",
-    "tailwindcss": "^4.3.0",
-    "vite": "^8.0.14"
-  }
+    "name": "tslib",
+    "author": "Microsoft Corp.",
+    "homepage": "https://www.typescriptlang.org/",
+    "version": "2.8.1",
+    "license": "0BSD",
+    "description": "Runtime library for TypeScript helper functions",
+    "keywords": [
+        "TypeScript",
+        "Microsoft",
+        "compiler",
+        "language",
+        "javascript",
+        "tslib",
+        "runtime"
+    ],
+    "bugs": {
+        "url": "https://github.com/Microsoft/TypeScript/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Microsoft/tslib.git"
+    },
+    "main": "tslib.js",
+    "module": "tslib.es6.js",
+    "jsnext:main": "tslib.es6.js",
+    "typings": "tslib.d.ts",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "module": {
+                "types": "./modules/index.d.ts",
+                "default": "./tslib.es6.mjs"
+            },
+            "import": {
+                "node": "./modules/index.js",
+                "default": {
+                    "types": "./modules/index.d.ts",
+                    "default": "./tslib.es6.mjs"
+                }
+            },
+            "default": "./tslib.js"
+        },
+        "./*": "./*",
+        "./": "./"
+    }
 }
